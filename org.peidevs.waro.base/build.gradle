@@ -1,0 +1,21 @@
+
+plugins {
+    id 'java-library'
+    id 'org.gradle.java.experimental-jigsaw' version '0.1.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // NOTE: automatic modules, referenced in module-info.java
+    implementation 'org.springframework:spring-beans:4.1.5.RELEASE'
+    implementation 'org.springframework:spring-context:4.1.5.RELEASE'
+    implementation 'org.springframework:spring-core:4.1.5.RELEASE'
+
+    testImplementation 'junit:junit:4.11'
+}
+
+javaModule.name = 'org.peidevs.waro.base'
+

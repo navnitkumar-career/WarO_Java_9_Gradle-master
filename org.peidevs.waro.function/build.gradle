@@ -1,0 +1,21 @@
+
+plugins {
+    id 'java-library'
+    id 'org.gradle.java.experimental-jigsaw' version '0.1.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":org.peidevs.waro.base")
+
+    // NOTE: automatic module, referenced in module-info.java
+    implementation 'com.google.guava:guava:18.0'
+
+    testImplementation 'junit:junit:4.11'
+}
+
+javaModule.name = 'org.peidevs.waro.function'
+
